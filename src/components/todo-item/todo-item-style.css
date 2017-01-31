@@ -1,0 +1,43 @@
+button {
+  border: none;
+  background: inherit;
+  cursor: pointer;
+  padding-right: 4px;
+}
+
+button.remove {
+  color: black;
+  padding: 0;
+  display: block;
+  padding: 0px 5px 0px 5px;
+}
+
+button.completed {
+  color: green;
+  padding: 0;
+  padding-right: 0.5rem;
+}
+
+.todo-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 3px;
+  margin: 3px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  flex: 0 1 auto;
+  height: 2rem;
+  line-height: 2rem;
+  text-indent: 1rem;
+}
+
+.todo-container {
+  display: flex;
+}
+
+.edit-container {
+  display: flex;
+}
