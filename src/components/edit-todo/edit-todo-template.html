@@ -1,0 +1,13 @@
+<div class='edit-todo-wrapper'>
+  <input
+    class='todo-item edit-input'
+    v-on:keyup.enter='$emit("edit", index, todo.editing)'
+    v-on:blur='$emit("edit", index, todo.editing)'
+    type='text'
+    ref='todoInput'
+    v-model='todo.title'
+  />
+  <button class='remove' v-on:click='$emit("remove", index)'>
+    <i class='fa fa-trash fa-lg'></i>
+  </button>
+</div>

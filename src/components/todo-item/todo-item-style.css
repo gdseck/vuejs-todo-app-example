@@ -5,39 +5,40 @@ button {
   padding-right: 4px;
 }
 
-button.remove {
-  color: black;
-  padding: 0;
-  display: block;
-  padding: 0px 5px 0px 5px;
-}
-
 button.completed {
   color: green;
-  padding: 0;
-  padding-right: 0.5rem;
 }
 
-.todo-item {
+button.active {
+  color: lightgray;
+}
+
+button.remove {
+  color: black;
+}
+
+.todo-content-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  border: 1px solid;
-  border-radius: 3px;
-  margin: 3px;
-  margin-left: 0px;
-  margin-right: 0px;
+  border: 1px solid black;
   width: 100%;
+  height: 100%;
+  position: relative;
   flex: 0 1 auto;
-  height: 2rem;
-  line-height: 2rem;
+  border-radius: 3px;
+  line-height: 3rem;
   text-indent: 1rem;
+  font-size: 1.2rem;
 }
 
 .todo-container {
   display: flex;
-}
-
-.edit-container {
-  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-right: 10px;
 }

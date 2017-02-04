@@ -1,33 +1,24 @@
 <ul class='todo-list'>
   <div v-for='(todo, index) in todos'>
-    <div
-      class='edit-container'
-      v-if='hasStatus[index] && isEditing[index]'
-    >
-      <input
+    <li class='todo-wrapper'>
+      <todo-item
+        v-if='hasStatus[index] && !isEditing[index]'
         :todo='todo'
         :index='index'
         :key='index'
-        class='todo-item edit-input'
-        v-on:keyup.enter='$emit("edit", index, todo.editing)'
-        v-on:blur='$emit("edit", index, todo.editing)'
-        type='text'
-        ref='todoInput'
-        v-model='todo.title'
+        v-on:remove='todos.splice(index, 1)'
+        v-on:completed='$emit("completed", index)'
+        v-on:edit='edit'
+        v-on:save='save'
       />
-      <button class='remove' v-on:click='$emit("remove", index)'>
-        <i class='fa fa-trash'></i>
-      </button>
-    </div>
-    <todo-item
-      :todo='todo'
-      :index='index'
-      :key='index'
-      v-if='hasStatus[index] && !isEditing[index]'
-      v-on:remove='todos.splice(index, 1)'
-      v-on:completed='$emit("completed", index)'
-      v-on:edit='edit'
-      v-on:save='save'
-    />
+      <edit-todo
+        v-if='hasStatus[index] && isEditing[index]'
+        :todo='todo'
+        :index='index'
+        :key='index'
+        v-on:remove='todos.splice(index, 1)'
+        v-on:edit='edit'
+      />
+    </li>
   </div>
 </ul>

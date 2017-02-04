@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import TodoItem from '../todo-item/index.vue'
+import EditTodo from '../edit-todo/index.vue'
 
 export default Vue.component('todo-list', {
   props: ['todos', 'status'],
   components: {
-    'todo-item': TodoItem
+    'todo-item': TodoItem,
+    'edit-todo': EditTodo
   },
   computed: {
     isEditing: {

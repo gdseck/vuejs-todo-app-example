@@ -1,20 +1,17 @@
 <div class='todo-container'>
-  <li
-    class='todo-item'
+  <div
     v-on:click='$emit("edit", index)'
+    class='todo-content-wrapper'
   >
     <span class='todo-content'>{{todo.title}}</span>
-    <div class='todo-actions'>
-      <button
-        v-if='!(todo.status === "completed")' 
-        class='completed'
-        v-on:click.stop='completed(index)'
-      >
-        <i class='fa fa-check-circle-o' />
-      </button>
-    </div>
-  </li>
+    <button
+      v-bind:class='[todo.status === "completed" ? "completed" : "active"]'
+      v-on:click.stop='completed(index)'
+    >
+      <i class='fa fa-check-circle-o' />
+    </button>
+  </div>
   <button class='remove' v-on:click='$emit("remove")'>
-    <i class='fa fa-trash'></i>
+    <i class='fa fa-trash fa-lg'></i>
   </button>
 </div>

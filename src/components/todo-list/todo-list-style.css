@@ -6,6 +6,15 @@
   flex-flow: column nowrap;
 }
 
+.todo-wrapper {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  list-style: none;
+  height: 3rem;
+  margin-bottom: 5px;
+}
+
 .edit-input {
   border: none;
   color: gray;
