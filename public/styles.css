@@ -7,7 +7,7 @@ html, body {
   height: 100vh;
   width: 100%;
   margin: 0;
-  background: #8fcaee;
+  background: linear-gradient(to right, #1d1e1f, #464141);
 }
 
 .container {
@@ -16,14 +16,12 @@ html, body {
 }
 
 .app-title {
-  margin-bottom: 0;
   text-align: center;
   font-size: 39px;
   color: #fff;
   margin-bottom: 1rem;
-  border-bottom: 2px solid;
-  border-top: 2px solid;
   padding: 1rem;
   text-shadow: 1px 1px 1px blue;
   background: #27496d;
+  margin-top: 0;
 }

@@ -133,10 +133,9 @@
     top: 2rem;
     position: relative;
     border: 1px solid;
-    border-radius: 3px;
     padding: 1rem;
-    box-shadow: 1px 1px 1px 1px grey;
-    background: white;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.8);
+    background: #fff;
   }
 
   .status-bar {
@@ -153,31 +152,19 @@
     width: 33.3%;
     border: none;
     text-align: center;
-    color: #fff;
-    background: #6496c8;
-    text-shadow: 1px -1px 7px #417cb8;
-    border: 1px solid;
+    color: #0f0d27;
+    background: #dde2e6;
   }
 
   .status:hover {
     background-color: #346392;
-    text-shadow: -1px 1px #27496d;
+    color: #fff;
   }
 
   .status.active {
     background-color: #27496d;
+    color: #fff;
     text-shadow: -1px 1px #193047;
-  }
-
-  .status:nth-child(1) {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-right: 1px solid #fff;
-  }
-
-  .status:nth-child(3) {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
   }
 
   .input {
