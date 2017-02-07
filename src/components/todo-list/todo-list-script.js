@@ -34,13 +34,8 @@ export default Vue.component('todo-list', {
     updateTodo: function (value) {
       this.$emit('input', value)
     },
-    edit: function (index) {
-      let self = this
-      this.$emit('edit', index)
-      Vue.nextTick(function () {
-        self.$refs.todoInput[0].focus()
-        self.$refs.todoInput[0].select()
-      })
+    edit: function (index, editing) {
+      this.$emit('edit', index, editing)
     },
     save: function (index) {
       this.$emit('save', index)

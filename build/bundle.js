@@ -9816,13 +9816,8 @@
 	    updateTodo: function updateTodo(value) {
 	      this.$emit('input', value);
 	    },
-	    edit: function edit(index) {
-	      var self = this;
-	      this.$emit('edit', index);
-	      _vue2.default.nextTick(function () {
-	        self.$refs.todoInput[0].focus();
-	        self.$refs.todoInput[0].select();
-	      });
+	    edit: function edit(index, editing) {
+	      this.$emit('edit', index, editing);
 	    },
 	    save: function save(index) {
 	      this.$emit('save', index);
@@ -9941,6 +9936,9 @@
 	    },
 	    toggleCompleted: function toggleCompleted(index) {
 	      this.$emit('toggleCompleted', index);
+	    },
+	    edit: function edit(index) {
+	      this.$emit('edit', index);
 	    }
 	  }
 	});
@@ -9956,7 +9954,7 @@
 	    staticClass: "todo-content-wrapper",
 	    on: {
 	      "click": function($event) {
-	        _vm.$emit("edit", _vm.index)
+	        _vm.edit(_vm.index)
 	      }
 	    }
 	  }, [_c('span', {
@@ -10094,7 +10092,13 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _vue2.default.component('todo-item', {
-	  props: ['todo', 'index', 'value']
+	  props: ['todo', 'index', 'value'],
+	  methods: {
+	    focus: function focus() {
+	      this.$refs.todoInput.focus();
+	      this.$refs.todoInput.select();
+	    }
+	  }
 	});
 
 /***/ },
@@ -10102,7 +10106,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	  return _c('transition', {
+	    on: {
+	      "enter": _vm.focus
+	    }
+	  }, [_c('div', {
 	    staticClass: "edit-todo-wrapper"
 	  }, [_c('input', {
 	    directives: [{
@@ -10141,7 +10149,7 @@
 	    }
 	  }, [_c('i', {
 	    staticClass: "fa fa-trash fa-lg"
-	  })])])
+	  })])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {

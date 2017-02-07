@@ -8,6 +8,9 @@ export default Vue.component('todo-item', {
     },
     toggleCompleted: function (index) {
       this.$emit('toggleCompleted', index)
+    },
+    edit: function (index) {
+      this.$emit('edit', index)
     }
   }
 })

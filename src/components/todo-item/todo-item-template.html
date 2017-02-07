@@ -1,6 +1,6 @@
 <div class='todo-container'>
   <div
-    v-on:click='$emit("edit", index)'
+    v-on:click='edit(index)'
     class='todo-content-wrapper'
   >
     <span class='todo-content'>{{todo.title}}</span>
