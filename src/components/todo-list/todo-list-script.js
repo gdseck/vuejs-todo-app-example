@@ -29,16 +29,5 @@ export default Vue.component('todo-list', {
         })
       }
     }
-  },
-  methods: {
-    updateTodo: function (value) {
-      this.$emit('input', value)
-    },
-    edit: function (index, editing) {
-      this.$emit('edit', index, editing)
-    },
-    save: function (index) {
-      this.$emit('save', index)
-    }
   }
 })

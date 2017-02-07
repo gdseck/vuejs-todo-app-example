@@ -8,8 +8,8 @@
         :key='index'
         v-on:remove='todos.splice(index, 1)'
         v-on:toggleCompleted='$emit("toggleCompleted", index)'
-        v-on:edit='edit'
-        v-on:save='save'
+        v-on:edit='$emit("edit", index, todo.editing)'
+        v-on:save='$emit("save", index)'
       />
       <edit-todo
         v-if='hasStatus[index] && isEditing[index]'
@@ -17,7 +17,7 @@
         :index='index'
         :key='index'
         v-on:remove='todos.splice(index, 1)'
-        v-on:edit='edit'
+        v-on:edit='$emit("edit", index, todo.editing)'
       />
     </li>
   </div>

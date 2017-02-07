@@ -1,12 +1,12 @@
 <div class='todo-container'>
   <div
-    v-on:click='edit(index)'
+    v-on:click='$emit("edit", index)'
     class='todo-content-wrapper'
   >
     <span class='todo-content'>{{todo.title}}</span>
     <button
       v-bind:class='[todo.status === "completed" ? "completed" : "active"]'
-      v-on:click.stop='toggleCompleted(index)'
+      v-on:click.stop='$emit("toggleCompleted", index)'
     >
       <i class='fa fa-check-circle-o fa-lg' />
     </button>
