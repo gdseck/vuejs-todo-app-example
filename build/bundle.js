@@ -10153,7 +10153,7 @@
 	  return _c('ul', {
 	    staticClass: "todo-list"
 	  }, _vm._l((_vm.todos), function(todo, index) {
-	    return _c('div', [_c('li', {
+	    return _c('div', [(_vm.hasStatus[index]) ? _c('li', {
 	      staticClass: "todo-wrapper"
 	    }, [(_vm.hasStatus[index] && !_vm.isEditing[index]) ? _c('todo-item', {
 	      key: index,
@@ -10183,7 +10183,7 @@
 	        },
 	        "edit": _vm.edit
 	      }
-	    }) : _vm._e()], 1)])
+	    }) : _vm._e()], 1) : _vm._e()])
 	  }))
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true

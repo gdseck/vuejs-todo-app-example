@@ -1,6 +1,6 @@
 <ul class='todo-list'>
   <div v-for='(todo, index) in todos'>
-    <li class='todo-wrapper'>
+    <li class='todo-wrapper' v-if='hasStatus[index]'>
       <todo-item
         v-if='hasStatus[index] && !isEditing[index]'
         :todo='todo'
