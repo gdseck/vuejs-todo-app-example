@@ -8,7 +8,7 @@
       v-bind:class='[todo.status === "completed" ? "completed" : "active"]'
       v-on:click.stop='completed(index)'
     >
-      <i class='fa fa-check-circle-o' />
+      <i class='fa fa-check-circle-o fa-lg' />
     </button>
   </div>
   <button class='remove' v-on:click='$emit("remove")'>

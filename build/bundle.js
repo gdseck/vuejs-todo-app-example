@@ -9906,7 +9906,7 @@
 
 
 	// module
-	exports.push([module.id, "\nbutton {\n  border: none;\n  background: inherit;\n  cursor: pointer;\n  padding-right: 4px;\n}\nbutton.completed {\n  color: green;\n}\nbutton.active {\n  color: lightgray;\n}\nbutton.remove {\n  color: black;\n}\n.todo-content-wrapper {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  border: 1px solid black;\n  width: 100%;\n  height: 100%;\n  position: relative;\n  flex: 0 1 auto;\n  border-radius: 3px;\n  line-height: 3rem;\n  text-indent: 1rem;\n  font-size: 1.2rem;\n}\n.todo-container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  position: relative;\n  width: 100%;\n  height: 100%;\n  border: none;\n  padding-right: 10px;\n}\n", ""]);
+	exports.push([module.id, "\nbutton {\n  border: none;\n  background: inherit;\n  cursor: pointer;\n  padding-right: 4px;\n}\nbutton.completed {\n  color: green;\n}\nbutton.active {\n  color: gray;\n}\ni {\n  padding-right: 10px;\n}\nbutton.remove {\n  color: black;\n}\n.todo-content-wrapper {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  border: 1px solid black;\n  width: 100%;\n  height: 100%;\n  position: relative;\n  flex: 0 1 auto;\n  border-radius: 3px;\n  line-height: 3rem;\n  text-indent: 1rem;\n  font-size: 1.2rem;\n}\n.todo-container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  position: relative;\n  width: 100%;\n  height: 100%;\n  border: none;\n  padding-right: 10px;\n}\n", ""]);
 
 	// exports
 
@@ -9964,7 +9964,7 @@
 	      }
 	    }
 	  }, [_c('i', {
-	    staticClass: "fa fa-check-circle-o"
+	    staticClass: "fa fa-check-circle-o fa-lg"
 	  })])]), _vm._v(" "), _c('button', {
 	    staticClass: "remove",
 	    on: {

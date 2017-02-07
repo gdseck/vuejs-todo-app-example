@@ -10,7 +10,11 @@ button.completed {
 }
 
 button.active {
-  color: lightgray;
+  color: gray;
+}
+
+i {
+  padding-right: 10px;
 }
 
 button.remove {
