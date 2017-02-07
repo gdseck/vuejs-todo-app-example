@@ -6,7 +6,7 @@
     <span class='todo-content'>{{todo.title}}</span>
     <button
       v-bind:class='[todo.status === "completed" ? "completed" : "active"]'
-      v-on:click.stop='completed(index)'
+      v-on:click.stop='toggleCompleted(index)'
     >
       <i class='fa fa-check-circle-o fa-lg' />
     </button>

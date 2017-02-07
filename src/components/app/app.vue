@@ -37,7 +37,7 @@
       :status='status'
       v-on:edit='edit'
       v-on:save='save'
-      v-on:completed='completed'
+      v-on:toggleCompleted='toggleCompleted'
     />
   </div>
 </template>
@@ -111,8 +111,14 @@
         todos[index].editing = false
         this.todos = todos
       },
-      completed: function (index) {
+      toggleCompleted: function (index) {
         let todos = this.todos.slice(0)
+
+        if (todos[index].status === COMPLETED) {
+          todos[index].status = ACTIVE
+          return
+        }
+
         todos[index].status = COMPLETED
       }
     }

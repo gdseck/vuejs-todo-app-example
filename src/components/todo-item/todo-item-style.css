@@ -1,8 +1,12 @@
 button {
-  border: none;
+  outline: none;
   background: inherit;
   cursor: pointer;
   padding-right: 4px;
+}
+
+button:focus {
+  outline: none;
 }
 
 button.completed {
@@ -11,6 +15,7 @@ button.completed {
 
 button.active {
   color: gray;
+  border: none;
 }
 
 i {

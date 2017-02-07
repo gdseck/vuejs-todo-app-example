@@ -7,7 +7,7 @@
         :index='index'
         :key='index'
         v-on:remove='todos.splice(index, 1)'
-        v-on:completed='$emit("completed", index)'
+        v-on:toggleCompleted='$emit("toggleCompleted", index)'
         v-on:edit='edit'
         v-on:save='save'
       />

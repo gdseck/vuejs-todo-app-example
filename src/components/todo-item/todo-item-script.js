@@ -6,8 +6,8 @@ export default Vue.component('todo-item', {
     updateTodo: function (value) {
       this.$emit('input', value)
     },
-    completed: function (index) {
-      this.$emit('completed', index)
+    toggleCompleted: function (index) {
+      this.$emit('toggleCompleted', index)
     }
   }
 })
